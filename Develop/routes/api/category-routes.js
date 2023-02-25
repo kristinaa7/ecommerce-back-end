@@ -14,7 +14,16 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-  Category.findByPk(req.params.id).then((categoryData) => {
+  // Category.findByPk(req.params.id).then((categoryData) => {
+  //   res.json(categoryData);
+  // })
+  Category.findOne(
+  {
+    where: {
+      id: req.params.id
+    },
+  })
+  .then((categoryData) => {
     res.json(categoryData);
   })
 });
@@ -50,6 +59,15 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
+  Category.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+  .then((deletedCategory) => {
+    res.json(deletedCategory);
+  })
+  .catch((err) => res.json(err));
 });
 
 module.exports = router;
