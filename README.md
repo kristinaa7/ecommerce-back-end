@@ -12,5 +12,6 @@ The following application is a fully function e-commerce site. My role as a deve
 * MySQL
 * Node js
 * Insomnia
+* Express
 
 ### Walkthrough Link
