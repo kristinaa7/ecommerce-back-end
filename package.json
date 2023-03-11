@@ -1,0 +1,33 @@
+{
+  "name": "ecommerce-back-end",
+  "version": "1.0.0",
+  "description": "## Description The following application is a fully function e-commerce site. My role as a developer was to successfully build the back end for this business site using the already created front end code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristinaa7/ecommerce-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristinaa7/ecommerce-back-end/issues"
+  },
+  "homepage": "https://github.com/kristinaa7/ecommerce-back-end#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.3"
+  }
+}
